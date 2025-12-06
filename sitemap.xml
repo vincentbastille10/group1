@@ -1,11 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
->
-  <url>
-    <loc>https://spectramedia.online/carte-projets</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-</urlset>
+<url>
+  <loc>https://spectramedia.online/carte-projets</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
