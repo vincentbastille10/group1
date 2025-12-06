@@ -293,3 +293,12 @@ a {
     text-align: center;
   }
 }
+/* Empêcher les boutons de dépasser des cartes */
+.tile {
+  overflow: hidden;
+}
+
+.tile-links .btn {
+  max-width: 100%;
+  white-space: normal;
+}
