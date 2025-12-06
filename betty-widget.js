@@ -1,4 +1,5 @@
 // Widget Betty embed - basé sur les 8 piliers (4 Arts + 4 Tech)
+// Version robuste avec try/catch sur les entrées utilisateur
 (function () {
   const root = document.getElementById("betty-chat-root");
   if (!root) return;
@@ -220,8 +221,6 @@
       const trimmed = text.trim();
       if (!trimmed) return;
       addMessage(trimmed, "user");
-      input.value = "";
-
       const lower = trimmed.toLowerCase();
 
       // Intention rapide
@@ -277,6 +276,20 @@
       addChoices();
     }
 
+    // Version safe : on ne laisse pas le bot crasher silencieusement
+    function safeHandleUserInput(text) {
+      try {
+        handleUserInput(text);
+      } catch (e) {
+        console.error("Erreur Betty widget :", e);
+        addMessage(
+          "Il y a eu un petit bug technique dans ma tête d’IA 😅. Tu peux cliquer sur un des boutons (Arts / Technologie ou un des 8 piliers) pendant que je me recale.",
+          "bot"
+        );
+        addChoices();
+      }
+    }
+
     function openChat() {
       state.opened = true;
       chatWindow.style.display = "flex";
@@ -303,13 +316,17 @@
     closeBtn.addEventListener("click", closeChat);
 
     sendBtn.addEventListener("click", function () {
-      handleUserInput(input.value);
+      const value = input.value || "";
+      input.value = "";
+      safeHandleUserInput(value);
     });
 
     input.addEventListener("keydown", function (e) {
       if (e.key === "Enter") {
         e.preventDefault();
-        handleUserInput(input.value);
+        const value = input.value || "";
+        input.value = "";
+        safeHandleUserInput(value);
       }
     });
   }
