@@ -9,7 +9,10 @@
 
 html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
-  background: radial-gradient(circle at 10% 0%, #1a2040 0%, #050713 55%, #020308 100%);
+  background:
+    radial-gradient(circle at 10% 0%, #3b82f6 0%, transparent 55%),
+    radial-gradient(circle at 90% 100%, #22c55e 0%, transparent 60%),
+    #020617;
   color: #E9EDF5;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -39,16 +42,16 @@ a {
 }
 
 .section-alt {
-  background: radial-gradient(circle at 90% 0%, rgba(90, 123, 255, 0.15), transparent 55%);
+  background: radial-gradient(circle at 80% 0%, rgba(59,130,246,0.18), transparent 55%);
 }
 
 /* ===========================
    HEADER
 =========================== */
 .site-header {
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  backdrop-filter: blur(14px);
-  background: linear-gradient(to bottom, rgba(3,6,24,0.85), rgba(3,6,24,0.3));
+  border-bottom: 1px solid rgba(148,163,184,0.35);
+  backdrop-filter: blur(18px);
+  background: linear-gradient(to bottom, rgba(3,7,18,0.95), rgba(3,7,18,0.7));
   position: sticky;
   top: 0;
   z-index: 20;
@@ -63,16 +66,16 @@ a {
 .logo-block {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.9rem;
 }
 
 .logo-mark {
-  width: 40px;
-  height: 40px;
+  width: 46px;
+  height: 46px;
   border-radius: 999px;
   overflow: hidden;
-  border: 2px solid rgba(255,255,255,0.18);
-  background: radial-gradient(circle at 30% 0%, #5a7bff, #37d67a);
+  border: 2px solid rgba(255,255,255,0.25);
+  background: radial-gradient(circle at 30% 0%, #5a7bff, #22c55e);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,22 +89,22 @@ a {
 
 .logo-title {
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
 }
 
 .logo-subtitle {
   font-size: 0.8rem;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 
 .main-nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.4rem;
   font-size: 0.9rem;
 }
 
 .main-nav a {
-  opacity: 0.8;
+  opacity: 0.85;
   position: relative;
 }
 
@@ -113,7 +116,7 @@ a {
   width: 0;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(90deg, #5a7bff, #37d67a);
+  background: linear-gradient(90deg, #5a7bff, #22c55e);
   transition: width 0.2s ease;
 }
 
@@ -142,9 +145,9 @@ a {
 .hero-kicker {
   text-transform: uppercase;
   font-size: 0.8rem;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   color: #9CA3AF;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.7rem;
 }
 
 .hero-left h1 {
@@ -155,13 +158,38 @@ a {
 
 .hero-lead {
   font-size: 0.98rem;
-  opacity: 0.9;
+  opacity: 0.92;
   max-width: 640px;
 }
 
 .hero-lead.secondary {
-  margin-top: 0.75rem;
-  opacity: 0.85;
+  margin-top: 0.8rem;
+  opacity: 0.88;
+}
+
+.hero-chips {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.chip {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148,163,184,0.7);
+  background: rgba(15,23,42,0.85);
+}
+
+.chip-art {
+  border-color: rgba(248,250,252,0.8);
+  background: linear-gradient(120deg, rgba(251,146,60,0.16), rgba(248,250,252,0.03));
+}
+
+.chip-tech {
+  border-color: rgba(56,189,248,0.9);
+  background: linear-gradient(120deg, rgba(56,189,248,0.12), rgba(15,23,42,0.9));
 }
 
 .hero-cta {
@@ -175,15 +203,17 @@ a {
    BUTTONS
 =========================== */
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.75rem 1.4rem;
   border-radius: 999px;
   font-size: 0.9rem;
   font-weight: 500;
-  text-align: center;
   border: 1px solid transparent;
   cursor: pointer;
   white-space: nowrap;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
 }
 
 .btn.small {
@@ -192,25 +222,26 @@ a {
 }
 
 .btn.primary {
-  background: linear-gradient(90deg, #5a7bff, #37d67a);
+  background: radial-gradient(circle at 0 0, #5a7bff, #22c55e);
   color: #020617;
-  box-shadow: 0 0 24px rgba(55, 214, 122, 0.28);
+  box-shadow: 0 0 22px rgba(56,189,248,0.3);
 }
 
 .btn.ghost {
-  background: rgba(15,23,42,0.75);
-  border-color: rgba(148,163,184,0.8);
+  background: rgba(15,23,42,0.85);
+  border-color: rgba(148,163,184,0.9);
   color: #E9EDF5;
 }
 
 .btn.pill-btn {
   margin-top: 1.2rem;
   width: 100%;
-  justify-content: center;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(15,23,42,0.85);
 }
 
 /* ===========================
@@ -223,15 +254,38 @@ a {
 }
 
 .pillar-card {
-  border-radius: 22px;
-  padding: 1.8rem 1.6rem;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: radial-gradient(circle at 0% 0%, rgba(255,255,255,0.08), transparent 60%),
-              linear-gradient(145deg, rgba(15,23,42,0.96), rgba(15,23,42,0.88));
-  box-shadow: 0 18px 45px rgba(15,23,42,0.85);
+  border-radius: 24px;
+  padding: 1.9rem 1.7rem;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: radial-gradient(circle at 0% 0%, rgba(255,255,255,0.12), transparent 60%),
+              linear-gradient(145deg, rgba(15,23,42,0.98), rgba(3,7,18,0.96));
+  box-shadow: 0 18px 45px rgba(15,23,42,0.9);
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pillar-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 120% -10%, rgba(56,189,248,0.35), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.pillar-card:hover::before {
+  opacity: 1;
+}
+
+.pillar-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #CBD5F5;
+  opacity: 0.9;
 }
 
 .pillar-card h2 {
@@ -240,27 +294,27 @@ a {
 
 .pillar-card p {
   font-size: 0.9rem;
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
 .pillar-card ul {
   margin-top: 0.4rem;
   padding-left: 1.1rem;
   font-size: 0.9rem;
-  opacity: 0.92;
+  opacity: 0.94;
 }
 
 .pillar-card li {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.24rem;
 }
 
 .pillar-art {
-  border-image: linear-gradient(135deg, #f97316, #eab308) 1;
+  border-image: linear-gradient(135deg, #fb923c, #eab308) 1;
   border-width: 1px;
 }
 
 .pillar-tech {
-  border-image: linear-gradient(135deg, #5a7bff, #37d67a) 1;
+  border-image: linear-gradient(135deg, #22c55e, #38bdf8) 1;
   border-width: 1px;
 }
 
@@ -269,7 +323,7 @@ a {
 =========================== */
 .section-header {
   max-width: 720px;
-  margin-bottom: 2rem;
+  margin-bottom: 2.2rem;
 }
 
 .section-kicker {
@@ -305,13 +359,19 @@ a {
 /* Tile style */
 .tile {
   position: relative;
-  border-radius: 22px;
+  border-radius: 24px;
   padding: 1.8rem 1.6rem 1.6rem;
-  border: 1px solid rgba(148,163,184,0.4);
+  border: 1px solid rgba(148,163,184,0.45);
   background: radial-gradient(circle at 0 0, rgba(255,255,255,0.09), transparent 60%),
-              rgba(15,23,42,0.96);
-  backdrop-filter: blur(14px);
-  overflow: hidden;           /* 🔒 rien ne dépasse */
+              rgba(15,23,42,0.98);
+  backdrop-filter: blur(16px);
+  overflow: hidden;                 /* 🔒 rien ne dépasse */
+  transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
+}
+
+.tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(15,23,42,0.9);
 }
 
 .tile-art {
@@ -324,16 +384,28 @@ a {
   border-width: 1px;
 }
 
-.tile-tag {
+.tile-badge {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
   font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.9);
+  border: 1px solid rgba(148,163,184,0.8);
+  opacity: 0.8;
+}
+
+.tile-tag {
+  font-size: 0.76rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   color: #9CA3AF;
 }
 
 .tile h3 {
-  margin-top: 0.5rem;
-  font-size: 1.05rem;
+  margin-top: 0.6rem;
+  font-size: 1.08rem;
   margin-bottom: 0.5rem;
 }
 
@@ -363,8 +435,8 @@ a {
 }
 
 .tile-links .btn {
-  max-width: 100%;    /* 🔒 jamais plus large que la carte */
-  white-space: normal; /* 🔒 retour à la ligne si texte long */
+  max-width: 100%;        /* 🔒 jamais plus large que la carte */
+  white-space: normal;    /* 🔒 retour à la ligne si texte long */
 }
 
 .text-link {
@@ -449,6 +521,6 @@ a {
   }
 
   .main-nav {
-    display: none; /* simplifier sur mobile, si tu veux faire mieux après on pourra */
+    display: none;
   }
 }
