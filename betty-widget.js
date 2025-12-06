@@ -6,19 +6,20 @@
   const PILLARS = {
     ARTS: {
       MUSIQUE: {
-        label: "Musique (Spotify + Bandcamp + remixes)",
+        label: "Musique (Spotify + Bandcamp + remixes + TOP 100)",
         text:
-          "Côté musique, Vincent Bastille propose plus de 400 titres, avec des albums, EP club, remixes officiels et bandes originales. Tu peux écouter sur Spotify, explorer les catalogues complets sur Bandcamp, et découvrir son parcours sur vincentbastille.online.",
+          "Côté musique, Vincent Bastille propose plus de 400 titres : albums, EP club, remixes officiels et bandes originales, avec un vrai ancrage French Touch. Tu peux écouter sur Spotify, explorer les catalogues complets sur Bandcamp, voir sa bio… et accéder au TOP 100 French Touch & Electro qu’il a sélectionné.",
         links: [
           { label: "Écouter sur Spotify", url: "https://open.spotify.com/intl-fr/artist/2QS54zBHMU8zdaRs1pQRF0" },
           { label: "Bandcamp complet", url: "https://vincentbastille.bandcamp.com" },
+          { label: "TOP 100 French Touch", url: "/top-100/" },
           { label: "Bio & discographie", url: "https://www.vincentbastille.online/" }
         ]
       },
       FILMS: {
-        label: "Films & OST (Mystic, Le Lac)",
+        label: "Films & OST (Mystic, Le Lac, BO sur-mesure)",
         text:
-          "Pour l’image : Mystic et Le Lac, plus un site dédié aux soundtracks pour le cinéma de genre et la danse contemporaine. Si tu cherches une BO sur-mesure ou du licensing pour un projet film/danse, c’est ici.",
+          "Pour l’image : Mystic et Le Lac, plus un site dédié aux soundtracks pour le cinéma de genre et la danse contemporaine. Si tu cherches une BO sur-mesure ou du licensing pour un projet film/danse, c’est ici que ça se passe.",
         links: [
           { label: "Site OST films & danse", url: "https://vincentbastille-music-for-films-and.onrender.com/" },
           { label: "OST Mystic", url: "https://vincentbastille-music-for-films-and.onrender.com/mystic.html" },
@@ -26,12 +27,11 @@
         ]
       },
       DANSEFLIX: {
-        label: "DanseFlix",
+        label: "DanseFlix (plateforme vidéo pros du spectacle)",
         text:
-          "DanseFlix, c’est une plateforme vidéo privée pour les écoles de danse : captations de spectacles en multi-cam, accès sécurisé pour les familles, expérience type Netflix mais pensée pour la scène.",
+          "DanseFlix est une plateforme vidéo privée pour les professionnels du spectacle : compagnies, écoles, festivals. L’idée : captation multi-cam, montage, hébergement sécurisé et interface type plateforme de streaming pour valoriser vos créations et proposer une vraie expérience vidéo à votre public.",
         links: [
-          { label: "Écrire à Vincent pour DanseFlix", url: "mailto:vincentbastille100@gmail.com?subject=DanseFlix%20-%20Acc%C3%A8s%20spectacles" },
-          { label: "Centre de danse Delphine Letort", url: "https://www.dansedelphineletort.com/" }
+          { label: "Demander un devis création vidéo", url: "mailto:vincentbastille100@gmail.com?subject=Devis%20cr%C3%A9ation%20vid%C3%A9o%20DanseFlix" }
         ]
       },
       STUDIO: {
@@ -46,38 +46,38 @@
     },
     TECH: {
       BETTY: {
-        label: "Betty Bots",
+        label: "Betty Bots (assistantes IA métiers)",
         text:
-          "Betty Bots, ce sont des assistantes IA spécialisées par métier (avocat, médecin, restaurateur, immobilier, etc.). Elles accueillent tes visiteurs, posent les bonnes questions et t’envoient des leads propres par email.",
+          "Betty Bots, ce sont des assistantes IA spécialisées par métier (avocat, médecin, restaurateur, immobilier, etc.). Elles accueillent tes visiteurs, posent les bonnes questions et t’envoient des leads propres par email. C’est le premier étage de la fusée pour une TPE ou un solo.",
         links: [
           { label: "Voir la page Betty Bots", url: "https://www.spectramedia.online/" },
           { label: "Fiche Betty dans l’annuaire IA", url: "https://spectraaidirectory.onrender.com/tool/1" }
         ]
       },
-      HAUBAN: {
-        label: "Hauban IA Watch",
+      DIRECTORY: {
+        label: "Spectra AI Directory (annuaire AI)",
         text:
-          "Hauban IA Watch, c’est un rapport quotidien sur les dernières avancées en IA : modèles, usages business, signaux faibles. L’idée : que tu restes à jour sans y passer 3 heures par jour.",
+          "Spectra AI Directory est un annuaire d’outils IA sélectionnés à la main, orienté vrais usages business : support, vente, contenu, analytics… L’idée : que tu trouves rapidement les 2–3 bons outils autour de Betty ou SoloOrchestra AI sans te perdre dans le bruit.",
+        links: [
+          { label: "Voir les meilleurs outils IA", url: "https://spectra-media-directory-english-version.onrender.com/top-ai-tools" },
+          { label: "Ajouter mon outil IA", url: "https://spectraaidirectory.onrender.com/add-tool" }
+        ]
+      },
+      HAUBAN: {
+        label: "Hauban IA Watch (veille IA quotidienne)",
+        text:
+          "Hauban IA Watch, c’est un rapport quotidien sur les dernières avancées en IA : modèles, usages business, signaux faibles. L’objectif : que tu restes à jour sans y passer 3 heures par jour, avec un résumé lisible et actionnable.",
         links: [
           { label: "Découvrir Hauban IA Watch", url: "https://spectramedia.gumroad.com/l/haubanai" }
         ]
       },
       ORCHESTRA: {
-        label: "Orchestra",
+        label: "SoloOrchestra AI (multi-agents pour solos & TPE)",
         text:
-          "Orchestra est un système d’agents IA coordonnés pour les solos et petites structures. Il aide à transformer des idées en systèmes récurrents (veille, offres, tunnels, produits) comme Hauban ou d’autres projets.",
+          "SoloOrchestra AI est l’évolution d’Orchestra : un système d’agents IA coordonnés (vente, marketing, produit, veille) pour les solos et petites structures. Il sert à transformer tes notes d’idées en projets récurrents (comme Hauban, Broc&Bamp, etc.).",
         links: [
-          { label: "Fiche Spectra Media (Orchestra)", url: "https://www.f6s.com/company/spectra-media1" },
-          { label: "Écrire à Vincent pour Orchestra", url: "mailto:vincentbastille100@gmail.com?subject=Projet%20Orchestra%20-%20Automatisation" }
-        ]
-      },
-      DIRECTORY: {
-        label: "Spectra AI Directory",
-        text:
-          "Spectra AI Directory est un annuaire d’outils IA sélectionnés à la main, orienté vrais usages business (support, vente, contenu, analytics…). Il s’intègre bien avec Betty et Orchestra.",
-        links: [
-          { label: "Voir les meilleurs outils IA", url: "https://spectra-media-directory-english-version.onrender.com/top-ai-tools" },
-          { label: "Ajouter mon outil IA", url: "https://spectraaidirectory.onrender.com/add-tool" }
+          { label: "Fiche Spectra Media (SoloOrchestra)", url: "https://www.f6s.com/company/spectra-media1" },
+          { label: "Écrire à Vincent pour SoloOrchestra", url: "mailto:vincentbastille100@gmail.com?subject=Projet%20SoloOrchestra%20AI" }
         ]
       }
     }
@@ -91,7 +91,6 @@
   }
 
   function renderWidget() {
-    // Bouton lanceur
     const launcher = createEl("button", "betty-launcher");
     const avatar = createEl("div", "betty-launcher-avatar", "B");
     const label = createEl("span", null, "Parler avec Betty");
@@ -101,7 +100,6 @@
     const chatWindow = createEl("div", "betty-chat-window");
     chatWindow.style.display = "none";
 
-    // Header
     const header = createEl("div", "betty-chat-header");
     const headerLeft = createEl("div", "betty-chat-header-left");
     const headerAvatar = createEl("div", "betty-chat-avatar", "B");
@@ -153,7 +151,7 @@
       const choicesWrap = createEl("div", "betty-choices");
       const groups = [
         { key: "ARTS", label: "🎵 Arts : musique, films, danse…" },
-        { key: "TECH", label: "🤖 Technologie : Betty, Hauban, Orchestra…" }
+        { key: "TECH", label: "🤖 Technologie : Betty, annuaire AI, Hauban, SoloOrchestra…" }
       ];
       groups.forEach((g) => {
         const btn = createEl("button", "betty-choice", g.label);
@@ -201,14 +199,19 @@
         const linkLines = pillar.links
           .map((l) => "• " + l.label)
           .join("\n");
-        addMessage("Je te recommande de commencer par :\n" + linkLines + "\nJe t’ouvre les liens dans de nouveaux onglets.", "bot");
+        addMessage(
+          "Je te recommande de commencer par :\n" +
+            linkLines +
+            "\nJe t’ouvre les liens dans de nouveaux onglets.",
+          "bot"
+        );
         pillar.links.forEach((l) => {
           window.open(l.url, "_blank");
         });
       }
 
       addMessage(
-        "Tu peux me demander un autre pilier (Musique, Films & OST, DanseFlix, Studio, Betty Bots, Hauban, Orchestra, Annuaire), ou m’écrire ce que tu cherches (ex : “je suis prof de danse”, “j’ai un cabinet libéral”…).",
+        "Tu peux me demander un autre pilier (Musique, Films & OST, DanseFlix, Studio, Betty Bots, annuaire AI, Hauban, SoloOrchestra), ou m’écrire ce que tu cherches (ex : “je suis prof de danse”, “j’ai un cabinet libéral”…).",
         "bot"
       );
     }
@@ -222,7 +225,7 @@
       const lower = trimmed.toLowerCase();
 
       // Intention rapide
-      if (lower.includes("musique") || lower.includes("spotify") || lower.includes("bandcamp")) {
+      if (lower.includes("musique") || lower.includes("spotify") || lower.includes("bandcamp") || lower.includes("top 100")) {
         return handlePillarChoice("ARTS", "MUSIQUE");
       }
       if (lower.includes("film") || lower.includes("ost") || lower.includes("mystic") || lower.includes("lac")) {
@@ -237,20 +240,20 @@
       if (lower.includes("betty")) {
         return handlePillarChoice("TECH", "BETTY");
       }
-      if (lower.includes("hauban")) {
-        return handlePillarChoice("TECH", "HAUBAN");
-      }
-      if (lower.includes("orchestra")) {
-        return handlePillarChoice("TECH", "ORCHESTRA");
-      }
       if (lower.includes("annuaire") || lower.includes("directory") || lower.includes("outil ia")) {
         return handlePillarChoice("TECH", "DIRECTORY");
       }
+      if (lower.includes("hauban")) {
+        return handlePillarChoice("TECH", "HAUBAN");
+      }
+      if (lower.includes("orchestra") || lower.includes("solorchestra") || lower.includes("solo orchestra")) {
+        return handlePillarChoice("TECH", "ORCHESTRA");
+      }
 
       // Profils types
-      if (lower.includes("prof de danse") || lower.includes("école de danse")) {
+      if (lower.includes("prof de danse") || lower.includes("école de danse") || lower.includes("compagnie")) {
         addMessage(
-          "Tu es prof de danse / école de danse : je te conseille de regarder DanseFlix (captations + VOD) et les projections vidéo pour la scène. Je peux aussi te paramétrer une Betty pour les inscriptions.",
+          "Tu es dans le monde de la danse / du spectacle : je te conseille de regarder DanseFlix (captation & plateforme vidéo) et les projections vidéo pour la scène. On peut aussi te paramétrer une Betty pour les inscriptions ou les demandes de devis.",
           "bot"
         );
         addSubChoices("ARTS");
@@ -259,7 +262,7 @@
 
       if (lower.includes("tpe") || lower.includes("artisan") || lower.includes("commerce") || lower.includes("cabinet")) {
         addMessage(
-          "Pour une TPE / artisan / cabinet, le point de départ le plus simple est Betty Bots (assistant métier) et éventuellement l’annuaire IA pour les bons outils autour.",
+          "Pour une TPE / artisan / cabinet, le point de départ le plus simple est Betty Bots (assistant métier) et l’annuaire AI pour compléter avec 2–3 outils pertinents autour.",
           "bot"
         );
         addSubChoices("TECH");
@@ -268,7 +271,7 @@
 
       // Fallback : rediriger vers choix
       addMessage(
-        "Je me base ici sur 8 piliers : Musique, Films & OST, DanseFlix, Studio de remix & projections, Betty Bots, Hauban IA Watch, Orchestra, Spectra AI Directory. Dis-moi lequel t’attire le plus, ou clique sur un bouton ci-dessous.",
+        "Je me base ici sur 8 piliers : Musique, Films & OST, DanseFlix, Studio de remix & projections, Betty Bots, annuaire AI, Hauban IA Watch, SoloOrchestra AI. Dis-moi lequel t’attire le plus, ou clique sur un bouton ci-dessous.",
         "bot"
       );
       addChoices();
@@ -282,7 +285,7 @@
         messages.dataset.initialized = "1";
         addMessage("👋 Bonjour, moi c’est Betty. Je veille sur les 8 piliers de Spectra Media.", "bot");
         addMessage(
-          "En gros, tu as 4 blocs Arts (Musique, Films & OST, DanseFlix, Studio de remix & projections) et 4 blocs Technologie (Betty Bots, Hauban IA Watch, Orchestra, Spectra AI Directory).",
+          "Cette page est la carte des projets : 4 blocs Arts (Musique, Films & OST, DanseFlix, Studio de remix & projections) et 4 blocs Technologie (Betty Bots, annuaire AI, Hauban IA Watch, SoloOrchestra AI).",
           "bot"
         );
         addMessage("Tu veux commencer par la partie Arts ou la partie Technologie ?", "bot");
